@@ -1,7 +1,6 @@
 #!/bin/bash
-A=$1
-B=$2
-C=`expr $A + $B`
+NUMBER1=$1
+NUMBER2=$2
+SUM=$(($NUMBER1+$NUMBER2))
 
-echo "Addition of $A+$B=$C"
- 
+echo "addition of 2 numbers is $SUM"
