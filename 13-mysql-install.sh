@@ -20,3 +20,5 @@ if [ $? -ne 0 ];then
 else 
    echo "$PACKAGENAME is already installed, nothing to do"
 fi
+
+echo "$PACKAGENAME"
