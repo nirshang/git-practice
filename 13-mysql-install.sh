@@ -1,6 +1,5 @@
 #!/bin/bash
 USERID=$(id -u)
-PACKAGENAME=$1
 if [ $USERID -ne 0 ];then
   echo "Please run this script with root priveleges"
   exit 1
@@ -9,16 +8,14 @@ fi
 dnf list installed mysql 
 
 if [ $? -ne 0 ];then
-   echo "$PACKAGENAME is not installed, installing $PACKAGENAME"
-   dnf install $PACKAGENAME -y
+   echo "mysql is not installed, installing mysql"
+   dnf install mysql -y
    if [ $? -ne 0 ];then
-      echo "$PACKAGENAME installation failed"
+      echo "mysql installation failed"
       exit 1
     else
-      echo "$PACKAGENAME installation success"
+      echo "mysql installation success"
     fi
 else 
-   echo "$PACKAGENAME is already installed, nothing to do"
+   echo "mysql is already installed, nothing to do"
 fi
-
-echo "$PACKAGENAME"
