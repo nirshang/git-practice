@@ -19,3 +19,18 @@ if [ $? -ne 0 ];then
 else 
    echo "mysql is already installed, nothing to do"
 fi
+
+dnf list installed git
+
+if [ $? -ne 0 ]; then
+   echo "git is not installed, installing git"
+   dnf install git -y
+   if [ $? -ne 0 ];then
+      echo "git installation failed"
+      exit 1
+    else
+      echo "git installation success"
+    fi
+else
+   echo "git is already installed, nothing to do"
+fi
