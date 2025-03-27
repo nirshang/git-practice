@@ -1,3 +1,11 @@
 #!/bin/bash
 echo "all variables passed to the script are $@"
 echo "number of variables passed to the script are $#"
+echo "script name is $0"
+echo "current working directory is $PWD"
+echo "home directory of current user is $HOME"
+echo "process id of current process is $$"
+echo "process id of last background command is $!"
+echo "exit status of last command is $?"
+echo "username of current user is $USER"
+echo "hostname is $HOSTNAME"
