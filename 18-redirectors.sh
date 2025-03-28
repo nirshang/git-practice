@@ -30,6 +30,7 @@ VALIDATE(){
     fi
 }
 
+echo "script exicuted at : $date
 CHECK_ROOT
 
 for package in "$@"
