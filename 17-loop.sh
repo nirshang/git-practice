@@ -15,4 +15,5 @@ do
        fi
    else
        echo "The package $package is already installed"
+    fi
 done
