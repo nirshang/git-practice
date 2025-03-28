@@ -30,7 +30,7 @@ VALIDATE(){
     fi
 }
 
-echo "script exicuted at : $(date)"
+echo "script exicuted at : $(date)" &>> $LOG_FILE
 
 CHECK_ROOT
 
